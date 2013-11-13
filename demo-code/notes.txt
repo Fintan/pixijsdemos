@@ -1,0 +1,32 @@
+
+displaylist (compare to flash, Graphic is a DisplayObjectContainer!)
+drawing api
+coordinate space
+no real width/height for graphics
+hitTest
+noise
+phaser
+
+cannon (illustrate addChild on graphic, keyboard input to rotate barrel, setting (0,0) could be handy!)
+
+rotate (0-1, radians not degrees)
+
+reference to stage in displayobject is useful (w, h)
+
+
+Events
+DOM level 0 events (http://en.wikipedia.org/wiki/DOM_events#DOM_Level_2)
+Bonus: _.throttle
+
+
+render texture to draw a blur rather than apply a blur filter
+
+
+
+missing:
+
+curveTo()
+blurring effect
+transform matrix (translate, scale, skew)
+colour alpha?
+width/height properties on display objects
