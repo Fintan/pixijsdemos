@@ -1,5 +1,4 @@
 
-
 $(document).ready(onReady)
 
 $(window).resize(resize)
@@ -51,8 +50,8 @@ PIXI.Texture.fromCanvas = function(canvas)
 function onReady()
 {
 	
-	//renderer = PIXI.autoDetectRenderer(800, 600);
-	renderer = new PIXI.CanvasRenderer(800, 600);
+	renderer = PIXI.autoDetectRenderer(800, 600);
+	//renderer = new PIXI.CanvasRenderer(800, 600);
 	stage = new PIXI.Stage(0xFFFFFF);
 	
 	amount = (renderer instanceof PIXI.WebGLRenderer) ? 10 : 5;
