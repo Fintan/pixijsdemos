@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>pixi.js - Presentation Slides</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Fintan Boyle">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<!--link rel="stylesheet" href="css/theme/default.css" id="theme>
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme"-->
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Pixi.js</h1>
+					<h3>An introduction</h3>
+					<p>
+						<small><a href="http://github.com/fintan">Fintan Boyle</a> / <a href="http://twitter.com/fintanb">@fintanb</a></small>
+					</p>
+				</section>
+
+				<section>
+					<blockquote cite="http://www.goodboydigital.com/pixi-js-has-landed/" style="box-shadow: none;">
+						&ldquo;It is not a game engine – it is a rendering engine. It puts things on your screen and thats it.&rdquo;
+					</blockquote>
+					<img src="images/pixijsLogo.png" style="border: none; box-shadow: none;" alt="Pixi Logo">
+
+					<aside class="notes">
+						What is it?
+						http://www.goodboydigital.com/pixi-js-has-landed/
+						The pixi renderer allows a Easier 2D graphics in canvas
+						Pixi is a system for organizing all visual elements (Sprites, text, shapes, etc) and displaying them on your screen using the canvas element.
+					</aside>
+				</section>
+				<section>
+					<h2>Why use it?</h2>	
+					<aside class="notes">
+						performance (show bunny mark)
+					</aside>
+				</section>
+				<section>
+					<h2>Performance!</h2>	
+					<a href="../bunnymark/index.html">
+						<img src="images/bunnymark.jpg" alt="Lots of bunnies">
+					</a>
+					<aside class="notes">
+						
+					http://www.goodboydigital.com/pixi-js-bunnymark/
+					ref: http://blog.iainlobb.com/2010/11/display-list-vs-blitting-results.html
+					
+					</aside>
+				</section>
+				<section>
+					<h2>Another (big!) plus...</h2>	
+		
+					<aside class="notes">
+						
+					</aside>
+				</section>
+				<section>
+					<h2>Inspired by Flash</h2>
+					<a href="http://www.deviantart.com/morelikethis/368985836/cartoons/digital/comics/vector?offset=48&view_mode=2">
+						<img src="images/Flash_Logo_by_madrox123.png" alt="Flash">
+					</a>
+					<aside class="notes">
+						The Flash Display List specifically
+						The Display List in a nutshell is AS3′s system for organizing all visual elements (MovieClips, text, JPGs, &c.) and displaying them on your screen.
+						http://dispatchevent.org/mims/display-list-and-composite-pattern/
+
+						Composite is a simple yet powerful software design pattern that allows you to have different types of complex nested data share a common interface. In other words it allows you to program recursively without caring whether a thing is just a thing or a group of things.
+					</aside>
+				</section>
+				<section>
+					<h2>Composite hierarchy</h2>
+					<a href="http://livedocs.adobe.com/flex/3/html/help.html?content=05_Display_Programming_02.html">
+						<img src="images/Display_List_Organization.png" alt="Flash">
+					</a>
+					<aside class="notes">
+						http://livedocs.adobe.com/flex/3/html/help.html?content=05_Display_Programming_02.html
+						http://en.wikipedia.org/wiki/Composite_pattern
+
+						a group of objects are to be treated in the same way as a single instance of an object.
+					</aside>
+				</section>
+
+				<section>
+					<h2>DisplayObject</h2>
+					<p>
+						this is the base class for all objects that are rendered on the screen.
+					</p>
+
+					<aside class="notes">
+						
+					</aside>
+				</section>
+				<section>
+					<h2>DisplayObjectContainer</h2>
+					<p>
+						A DisplayObjectContainer represents a collection of display objects. It is the base class of all display objects that act as a container for other objects.
+					</p>
+
+					<aside class="notes">
+						
+					</aside>
+				</section>
+				<section>
+					<h2>Stage</h2>
+					<p>
+						A Stage represents the root of the display tree. Everything connected to the stage is rendered
+					</p>
+
+					<aside class="notes">
+						
+					</aside>
+				</section>
+				<section>
+					<h2>Graphics</h2>
+					<p>
+						The Graphics class contains a set of methods that you can use to create primitive shapes and lines.
+					</p>
+
+					<aside class="notes">
+						http://www.goodboydigital.com/pixijs/docs/classes/Graphics.html
+					</aside>
+				</section>
+				<section>
+					<h2>Sprite</h2>
+					<p>
+						The Sprite object is the base for all textured objects that are rendered to the screen
+					</p>
+
+					<aside class="notes">
+						http://www.goodboydigital.com/pixijs/docs/classes/Sprite.html
+					</aside>
+				</section>
+
+				<section>
+					<h2>MovieClip</h2>
+					<p>
+						A MovieClip is a simple way to display an animation depicted by a list of textures.
+					</p>
+
+					<aside class="notes">
+						http://www.goodboydigital.com/pixijs/docs/classes/MovieClip.html
+					</aside>
+				</section>
+				<section>
+					<h2>Getting started</h2>
+					<pre><code data-trim>				
+// create an new instance of a pixi stage
+var stage = new PIXI.Stage(0x66FF99);
+
+// create a renderer instance.
+var renderer = PIXI.autoDetectRenderer(400, 300);
+
+// add the renderer view element to the DOM
+document.body.appendChild(renderer.view);
+
+requestAnimFrame( animate );
+
+function animate() {
+    requestAnimFrame( animate );
+    // render the stage  
+    renderer.render(stage);
+}
+					</code></pre>
+
+					<aside class="notes">
+						http://www.goodboydigital.com/pixi-js-tutorial-getting-started/
+
+						The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser call a specified function at the next available opportunity (not a predetermined interval). 
+
+						https://developer.mozilla.org/en-US/docs/Web/API/window.requestAnimationFrame
+						http://creativejs.com/resources/requestanimationframe/
+
+					</aside>
+				</section>
+				<section>
+					<h2>Getting started</h2>
+					<pre><code data-trim>
+
+// create a texture from an image path
+var texture = PIXI.Texture.fromImage("bunny.png");
+// create a new Sprite using the texture
+var bunny = new PIXI.Sprite(texture);
+
+// centre the sprite's anchor point
+bunny.anchor.x = 0.5;
+bunny.anchor.y = 0.5;
+
+// move the sprite to the centre of the screen
+bunny.position.x = 200;
+bunny.position.y = 150;
+
+stage.addChild(bunny); 
+					</code></pre>
+
+					<aside class="notes">
+						http://www.goodboydigital.com/pixi-js-tutorial-getting-started/
+					</aside>
+				</section>
+				<section>
+					<h2>Demos</h2>
+					<a href="#" class="image navigate-down">
+						<img src="images/linear1.png" alt="Down arrow">
+					</a>
+					<aside class="notes">
+						
+						Static image - circle, then asteroid field without update
+
+						Explanation of app strucutre - Looping, setup, update - asteroid field (pixi is just a renderer)
+
+						Hit test - asteroid field
+
+						Line drawing, filter - math.sin with noise line
+
+						Mouse interaction - circle grid
+
+						Color, image data - image series
+
+						http://fboyle.com/dev/sketches/sketchasteroid.html
+						http://fboyle.com/dev/sketches/sketchCannon.html
+						http://fboyle.com/dev/ftween/benchmark.html
+						http://fboyle.com/dev/ftween/ftweentest.html
+					</aside>
+				</section>
+				<!--section>
+					<img src="images/genart3-flash.png">
+				</section-->
+				<!--section>
+					<img src="images/art1.png">
+				</section-->
+				<section>
+					<img src="images/art14.png">
+				</section>
+				<section>
+					<img src="images/art2.png">
+				</section>
+				<section>
+					<img src="images/genart-flash.png">
+				</section>
+				<section>
+					<img src="images/genart2-flash.png">
+				</section>
+				<!--section>
+					<img src="images/art3.png">
+				</section>
+				<section>
+					<img src="images/art4.png">
+				</section-->
+				<section>
+					<img src="images/art13.png">
+				</section>
+				<!--section>
+					<img src="images/art6.png">
+				</section>
+				<section>
+					<img src="images/art7.png">
+				</section-->
+				<section>
+					<img src="images/art8.png">
+				</section>
+				<section>
+					<img src="images/art9.png">
+				</section>
+				<section>
+					<img src="images/art10.png">
+				</section>
+				<section>
+					<img src="images/art11.png">
+				</section>
+				<!--section>
+					<img src="images/art12.png">
+				</section-->
+				<section>
+					<h2>Useful Links</h2>
+					<ul>
+						<li>
+							<a href="https://github.com/GoodBoyDigital/pixi.js">github.com/GoodBoyDigital/pixi.js</a>
+						</li>
+						<li>
+							<a href="http://www.goodboydigital.com/pixijs/docs/">goodboydigital.com/pixijs/docs</a>
+						</li>
+						<li>
+							<a href="https://developer.mozilla.org/en/docs/HTML/Canvas">developer.mozilla.org/en/docs/HTML/Canvas</a>
+						</li>
+						<li>
+							<a href="http://zenbullets.com/book.php">Generative Art: A Practical Guide</a>
+						</li>
+						<li>
+							<a href="http://phaser.io/">phaser.io</a>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="images/devtime.png">
+					<h5>THE END</h5>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
